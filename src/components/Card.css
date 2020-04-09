@@ -1,0 +1,26 @@
+.section {
+  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  /* border: solid 2px whitesmoke; */
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 25em;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: whitesmoke;
+}
+
+#challenge-photo {
+  width: 100%;
+}
+
+.status {
+  text-align: right;
+}

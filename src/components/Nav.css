@@ -5,6 +5,8 @@
   border-top: groove 0.1em #eee;
   display: flex;
   /* flex-direction: row; */
+  margin-bottom: 1em;
+  background-color: whitesmoke;
 }
 
 ul {

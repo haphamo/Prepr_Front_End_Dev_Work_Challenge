@@ -3,6 +3,7 @@ import { navigationItems } from '../data/Nav_Data.js';
 import "./Nav.css"
 import { randomKeyGenerator } from '../helpers/Helper_Functions'
 
+// Stretch: Create a toggle nav for mobile version
 // map through data in NavData to get a list of all nav items
 const allNavItems = navigationItems.map(nav => {
   const { name, src, alt } = nav

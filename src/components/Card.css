@@ -6,14 +6,13 @@
 }
 
 .card {
-  /* border: solid 2px whitesmoke; */
   border-radius: 0.75em;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 25em;
+  justify-content: space-between;
+  width: 23em;
   padding: 1em;
-  margin-bottom: 1em;
+  margin: 0em 1.5em 1em 1.5em;
   background-color: whitesmoke;
 }
 

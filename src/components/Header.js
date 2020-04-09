@@ -2,6 +2,7 @@ import React from 'react';
 import PreprLogo from '../assets/Prepr-Logo.png'
 import searchIcon from '../assets/search_icon.png'
 import user from '../assets/default-user.png'
+import './Header.css'
 
 export default function Header() {
   return(

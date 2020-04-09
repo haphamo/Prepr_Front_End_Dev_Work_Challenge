@@ -1,5 +1,6 @@
 import React from 'react';
-import { navigationItems } from '../data/NavData.js'
+import { navigationItems } from '../data/NavData.js';
+import "./Nav.css"
 
 // map through data in NavData to get a list of all nav items
 const allNavItems = navigationItems.map(nav => {

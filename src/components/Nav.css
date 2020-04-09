@@ -5,6 +5,7 @@
   border-top: groove 0.1em #eee;
   display: flex;
   /* flex-direction: row; */
+  background-color: white;
 }
 
 ul {
@@ -23,6 +24,17 @@ li {
   /* justify-content: center; */
   align-items: center;
   margin: 0em 0.5em 0em 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition-duration: 1s;
+
 }
 
 /* ul > li {

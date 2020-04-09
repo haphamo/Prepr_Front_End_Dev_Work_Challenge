@@ -7,14 +7,17 @@ import { randomKeyGenerator } from '../helpers/Helper_Functions'
 const allNavItems = navigationItems.map(nav => {
   const { name, src, alt } = nav
   return(
-    <li key={randomKeyGenerator()}>
-      <div className="nav-icon-">
-        <img alt={alt} src={src}></img>
-      </div>
-      <div className="nav-title">
-        {name}
-      </div>
-  </li>
+    <a href="www.google.ca" className="nav-item">
+      <li key={randomKeyGenerator()} >
+        <div className="nav-icon-">
+          <img alt={alt} src={src}></img>
+        </div>
+        <div className="nav-title">
+          {name}
+        </div>
+    </li>
+
+    </a>
   )
 })
 

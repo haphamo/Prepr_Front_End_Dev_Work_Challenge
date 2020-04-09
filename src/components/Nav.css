@@ -1,0 +1,35 @@
+.navigation {
+  height: auto;
+  border-bottom: groove 0.1em #eee;
+  border-top: groove 0.1em #eee;
+  display: flex;
+  /* flex-direction: row; */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+li {
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0em 0.5em 0em 0.5em;
+}
+
+/* ul > li {
+  flex: 10%
+} */
+
+.nav-title {
+  font-size: small;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 2px;
+}

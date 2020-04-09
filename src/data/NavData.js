@@ -27,13 +27,13 @@ export const navigationItems = [
   {
     key: randomKeyGenerator(),
     name: "Labs",
-    src: explore,
+    src: labs,
     alt: "explore labs"
   },
   {
     key: randomKeyGenerator(),
     name: "Challenges",
-    src: explore,
+    src: challenges,
     alt: "explore challenges"
   },
   {

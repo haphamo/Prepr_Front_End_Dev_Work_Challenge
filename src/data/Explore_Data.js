@@ -4,6 +4,9 @@ import c3 from '../assets/c3.png'
 import c4 from '../assets/c4.png'
 import c5 from '../assets/c5.png'
 import c6 from '../assets/c6.png'
+import l1 from '../assets/l1.png'
+import l2 from '../assets/l2.png'
+import l3 from '../assets/l3.png'
 
 // add challenge category
 export const data = {
@@ -76,12 +79,31 @@ export const data = {
   7:  {
         id: 7,
         type: 'lab',
-        status: 'open',
-        src: c6,
-        title: 'E-waste',
-        summary: 'Shared Services Canada (SSC) and Environment and Climate Change Canada (ECCC) are seeking a solution that will enable recycling of e-waste plastics and metals in Canada while respecting domestic and international requirements and obligations.',
+        status: 'public',
+        src: l1,
+        title: 'CareerMash Lab',
+        summary: 'Shared SCareerMash comes from the Information Technology Association of Canada (ITAC) Talent Division – a not-for-profit whose over 300 members include major employers in media, finance, information technology, and telecommunications. Our partners include school boards, universities, colleges, industry associations, and the governments of Canada, Ontario and Quebec.ervices Canada (SSC) and Environment and Climate Change Canada (ECCC) are seeking a solution that will enable recycling of e-waste plastics and metals in Canada while respecting domestic and international requirements and obligations.',
         tags: ['tagOne', 'tagTwo'],
-        startDate: 'March 5th, 2020',
-        endDate: 'April 14th, 2020'
+        createdOn: '01/04/2020'
+      },
+  8:  {
+        id: 8,
+        type: 'lab',
+        status: 'public',
+        src: l2,
+        title: 'Cybersecurity Talent Alliance Lab',
+        summary: 'Cybersecurity is increasingly driving innovation and economic activity in Canada. It already contributes $1.7 billion to Canada’s GDP and consists of over 11,000 well-paying jobs. With the global cybersecurity industry forecasted to grow by 66% by 2021, thousands of additional jobs could be created for Canadians in the years ahead. Governments, academia, and members of the private sector can work together to create new opportunities, drive investment, and foster leading-edge research and development',
+        tags: ['tagOne', 'tagTwo'],
+        createdOn: '01/04/2020'
+      },
+  9:  {
+        id: 9,
+        type: 'lab',
+        status: 'public',
+        src: l3,
+        title: 'COVID-19 Education System Lab',
+        summary: 'This is the official Lab for the COVID-19 Education System Project Area.',
+        tags: ['tagOne', 'tagTwo'],
+        createdOn: '01/04/2020'
       },
 }

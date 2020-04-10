@@ -16,6 +16,10 @@
   background-color: whitesmoke;
 }
 
+.card:hover {
+  box-shadow: 0em 0em 0.3em 0.2em rgb(40, 80, 55);
+}
+
 #challenge-photo {
   width: 100%;
 }

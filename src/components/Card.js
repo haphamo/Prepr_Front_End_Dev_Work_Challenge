@@ -9,7 +9,7 @@ export default function Card() {
   return(
     <div className="section">
 
-      <div className="card" >
+      <div className="card" id="card-section">
         <div className="status"> OPEN </div>
         <div className="img-section">
           <img id="challenge-photo" alt="img-preview" src={c1}></img>

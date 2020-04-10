@@ -2,16 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { navigationItems } from "../data/Nav_Data.js";
 import "./Nav.css";
-import { randomKeyGenerator } from "../helpers/Helper_Functions";
+import { randomKeyGenerator, filteredNav } from "../helpers/Helper_Functions";
 import Card from "./Card.js";
 
 // Stretch: Create a toggle nav for mobile version
 // map through data in NavData to get a list of all nav items
 
-// Link should go here!
-
 export default function Nav() {
-  const allNavItems = navigationItems.map((nav) => {
+
+  const filteredNavData = navigationItems.filter(filteredNav)
+
+  const allNavItems = filteredNavData.map((nav) => {
     const { name, src, alt, path } = nav;
     return (
       <Link to={`/${path}`} key={randomKeyGenerator()}>

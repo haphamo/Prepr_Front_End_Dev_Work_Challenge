@@ -9,4 +9,17 @@ const getSpecificData = function(data, type) {
   return Object.values(data).filter(item => item.type === type) 
 }
 
-export { randomKeyGenerator, shortenedSummaryForCardDisplay, getSpecificData }
+const filteredNav = function(navItem) {
+  switch(navItem.name) {
+    case "Challenges":
+      return false;
+    case "Projects":
+      return false;
+    case "Labs":
+      return false;
+    default:
+      return true;
+  }
+}
+
+export { randomKeyGenerator, shortenedSummaryForCardDisplay, getSpecificData, filteredNav }

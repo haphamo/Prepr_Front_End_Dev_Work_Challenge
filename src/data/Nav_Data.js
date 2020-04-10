@@ -14,17 +14,20 @@ export const navigationItems = [
   {
     name: "Explore",
     src: explore,
-    alt: "explore challenges labs and projects"
+    alt: "explore challenges labs and projects",
+    path: ""
   },
   {
     name: "Projects",
     src: projects,
-    alt: "explore projects"
+    alt: "explore projects",
+    path: "projects"
   },
   {
     name: "Labs",
     src: labs,
-    alt: "explore labs"
+    alt: "explore labs",
+    path: "labs"
   },
   {
     name: "Challenges",

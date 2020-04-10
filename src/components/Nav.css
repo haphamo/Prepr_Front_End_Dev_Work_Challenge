@@ -27,9 +27,20 @@ li {
   margin: 0em 0.5em 0em 0.5em;
 }
 
-ul > li {
-  flex: 10%
+a {
+  text-decoration: none;
+  color: black;
 }
+
+/* a:hover {
+  transform: scale(1.1);
+  transition-duration: 1s;
+
+} */
+
+/* ul > li {
+  flex: 10%
+} */
 
 .nav-title {
   font-size: small;

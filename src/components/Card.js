@@ -8,13 +8,13 @@ import { shortenedSummaryForCardDisplay, getSpecificData } from '../helpers/Help
 // Stretch: Date 
 // Come back to fix Layout flex start alignment
 
-export default function Card() {
+export default function Card({ type }) {
   // this state will toggle explore views between Challenges, Projects and Labs.
-  const [view, setView] = useState('challenge')
+  const [view, setView] = useState(type)
 
   // Depending on the view state, this will render the data from that view
-  const displaySpecificData = getSpecificData(data, view).map(element => {
-    const { id, type, status, src, title, summary } = element
+  const displaySpecificData = getSpecificData(data, type).map(element => {
+    const { id, status, src, title, summary } = element
     return(
         <div className="card" id="card-section" key={id}>
           <div className="status-with-img">

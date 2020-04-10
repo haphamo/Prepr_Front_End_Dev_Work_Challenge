@@ -20,9 +20,7 @@ export default function Header() {
       <div className="profile">
         <img alt="profile" src={user} id="profile"></img>
       </div>
-
     </div>
-
   </div>
   )
 }

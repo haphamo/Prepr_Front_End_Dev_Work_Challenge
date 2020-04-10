@@ -73,4 +73,15 @@ export const data = {
         startDate: 'March 5th, 2020',
         endDate: 'April 14th, 2020'
       },
+  7:  {
+        id: 7,
+        type: 'lab',
+        status: 'open',
+        src: c6,
+        title: 'E-waste',
+        summary: 'Shared Services Canada (SSC) and Environment and Climate Change Canada (ECCC) are seeking a solution that will enable recycling of e-waste plastics and metals in Canada while respecting domestic and international requirements and obligations.',
+        tags: ['tagOne', 'tagTwo'],
+        startDate: 'March 5th, 2020',
+        endDate: 'April 14th, 2020'
+      },
 }

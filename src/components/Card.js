@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Card.css'
 import { data } from '../data/Explore_Data.js'
 import { shortenedSummaryForCardDisplay, getSpecificData } from '../helpers/Helper_Functions.js'
@@ -10,7 +10,7 @@ import { shortenedSummaryForCardDisplay, getSpecificData } from '../helpers/Help
 
 export default function Card({ type }) {
   // this state will toggle explore views between Challenges, Projects and Labs.
-  const [view, setView] = useState(type)
+  // const [view, setView] = useState(type)
 
   // Depending on the view state, this will render the data from that view
   const displaySpecificData = getSpecificData(data, type).map(element => {

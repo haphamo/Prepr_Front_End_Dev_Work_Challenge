@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { categoryDataFromNavData, randomKeyGenerator } from '../helpers/Helper_Functions.js'
 import { navigationItems } from "../data/Nav_Data.js";
 import './CategoryButton.css'
 
 export default function CategoryButton() {
-
+  let { test } = useParams();
+  console.log(test)
   const categoryButtons = navigationItems.filter(categoryDataFromNavData)
 
-  const sorted = categoryButtons.sort((a, b) => {
+  categoryButtons.sort((a, b) => {
     if(a.name < b.name) { return -1; }
     if(a.name > b.name) { return 1; }
     return 0;

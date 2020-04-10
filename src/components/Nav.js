@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { navigationItems } from "../data/Nav_Data.js";
 import "./Nav.css";
 import { randomKeyGenerator, filteredNav } from "../helpers/Helper_Functions";
-import Card from "./Card.js";
 
 // Stretch: Create a toggle nav for mobile version
 // map through data in NavData to get a list of all nav items

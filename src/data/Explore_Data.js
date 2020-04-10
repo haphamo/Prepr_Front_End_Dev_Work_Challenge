@@ -5,6 +5,7 @@ import c4 from '../assets/c4.png'
 import c5 from '../assets/c5.png'
 import c6 from '../assets/c6.png'
 
+// add challenge category
 export const data = {
   1:  {
         id: 1,

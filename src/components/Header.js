@@ -14,7 +14,7 @@ export default function Header() {
       <div className="search">
         <img id="search-icon" alt="search-icon" src={searchIcon}></img>
         <form>
-          <input id="search-input" type="search" autoFocus></input>
+          <input id="search-input" type="search" autoFocus={false}></input>
         </form>
       </div>
       <div className="profile">

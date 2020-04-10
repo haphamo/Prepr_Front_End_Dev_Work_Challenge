@@ -32,7 +32,8 @@ export const navigationItems = [
   {
     name: "Challenges",
     src: challenges,
-    alt: "explore challenges"
+    alt: "explore challenges",
+    path: ""
   },
   {
     name: "Achievements",

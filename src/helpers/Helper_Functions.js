@@ -25,4 +25,18 @@ const filteredNav = function(navItem) {
   }
 }
 
-export { randomKeyGenerator, shortenedSummaryForCardDisplay, getSpecificData, filteredNav }
+// This is the array needed for the category buttons on Explore Page
+const categoryDataFromNavData = function(navItem) {
+  switch(navItem.name) {
+    case "Challenges":
+      return true;
+    case "Projects":
+      return true;
+    case "Labs":
+      return true;
+    default:
+      return false;
+  }
+}
+
+export { randomKeyGenerator, shortenedSummaryForCardDisplay, getSpecificData, filteredNav, categoryDataFromNavData }

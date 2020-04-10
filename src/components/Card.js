@@ -1,64 +1,40 @@
 import React from 'react'
 import './Card.css'
-import c1 from '../assets/c1.jpg'
-import c2 from '../assets/c2.jpg'
+import { data } from '../data/Explore_Data.js'
 
 // create a function that displays a certain amount of the desc on the explore page
+// have the Like (interest) button on the cards as well
+// Stretch: Date Format
+
+// get all challenges card
+// console.log(data)
+// console.log(Object.values(data))
+const allValues = Object.values(data)
+const allChallenges = allValues.filter(item => item.type === 'challenge')
+// console.log(allChallenges)
+
+const first = allChallenges[0]
+
+const shortenedSummaryForCardDisplay = function(summary) {
+  return `${first.summary.slice(0, 150)}...`
+}
+
+// console.log(shortenedSummaryForCardDisplay(first)) 
 
 export default function Card() {
   return(
     <div className="section">
-
       <div className="card" id="card-section">
-        <div className="status"> OPEN </div>
+        <div className="status"> {first.status.toUpperCase()} </div>
         <div className="img-section">
-          <img id="challenge-photo" alt="img-preview" src={c1}></img>
+          <img id="challenge-photo" alt="img-preview" src={first.src}></img>
         </div>
         <div className="text-section">
-          <div className="title">COVID-19 Challenge - Low-cost monitoring system for COVID-19 patients</div>
-          <div className="description"> NRC is seeking a low cost system (unit cost less than $25) that can continuously measure temperature, peripheral capillary oxygen saturation (SpO2), blood pressure (BP), pulse and respiration rates, and transmit... </div>
+          <div className="title">{first.title}</div>
+          <div className="description"> {shortenedSummaryForCardDisplay(first.summary)} </div>
           <div className="status">View More</div>
         </div>
       </div>
-
-      <div className="card" >
-      <div className="status"> OPEN </div>
-        <div className="img-section">
-          <img id="challenge-photo" alt="img-preview" src={c2}></img>
-        </div>
-        <div className="text-section">
-          <div className="title">COVID-19 Challenge - Point of Care & Home Diagnostic Kit for COVID-19</div>
-          <div className="description">The Public Health Agency of Canada (PHAC) and National Research Council (NRC) are seeking a solution that will diagnose individuals affected by COVID-19 within 3 days of the start of their symptoms using a sample, other than a nasopharyngeal 
-        </div>
-          <div className="status">View More</div>
-        </div>
-      </div>
-
-      <div className="card" >
-      <div className="status"> OPEN </div>
-        <div className="img-section">
-          <img id="challenge-photo" alt="img-preview" src={c1}></img>
-        </div>
-        <div className="text-section">
-          <div className="title">COVID-19 Challenge: Low-cost monitoring system for COVID-19 patients</div>
-          <div className="description"> NRC is seeking a low cost system (unit cost is less than $25) that can continuously measure temperature, peripheral capillary oxygen saturation (SpO2), blood pressure (BP), pulse and respiration rates, and transmit this information wirelessly to a base station for COVID-19 patient monitoring in locales including ERs, general wards, communities and homes. </div>
-          <div className="status">View More</div>
-        </div>
-      </div>
-
-      <div className="card" >
-      <div className="status"> OPEN </div>
-        <div className="img-section">
-          <img id="challenge-photo" alt="img-preview" src={c2}></img>
-        </div>
-        <div className="text-section">
-          <div className="title">COVID-19 Challenge - Point of Care & Home Diagnostic Kit for COVID-19</div>
-          <div className="description">The Public Health Agency of Canada (PHAC) and National Research Council (NRC) are seeking a solution that will diagnose individuals affected by COVID-19 within 3 days of the start of their symptoms using a sample, other than a nasopharyngeal 
-        </div>
-          <div className="status">View More</div>
-        </div>
-      </div>
-
     </div>
   )
 }

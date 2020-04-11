@@ -46,7 +46,7 @@ export default function Card({ type, filters }) {
                                 <Link to={`/${type}s/challenge/${id}`}>
                                   <div className="status">View More</div>
                                 </Link> :         
-                                <Link to={`${type}s/${type}/${id}`}>
+                                <Link to={`${url}/${type}/${id}`}>
                                   <div className="status">View More</div>
                                 </Link>
         }
@@ -55,25 +55,13 @@ export default function Card({ type, filters }) {
     );
   });
 
+  console.log('path',path)
+  console.log('url',url)
   return (
     <div>
-    <div>
-      {result.length > 0 ?  <div className="section">{displaySpecificData}</div> : <div>There are no {`${type}s`} available!</div>}
-    </div>
-    <Router>
-      <Switch>
-        <Route path="/challenges/challenge/:id">
-          <CardDetails />
-        </Route>
-        <Route path="/labs/lab/:id">
-          <CardDetails />
-        </Route>
-        <Route path="/projects/project/:id">
-          <CardDetails />
-        </Route>
-      </Switch>
-    </Router>
-
+      <div>
+        {result.length > 0 ?  <div className="section">{displaySpecificData}</div> : <div>There are no {`${type}s`} available!</div>}
+      </div>
     </div>
   )
 }

@@ -1,10 +1,12 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import "./Card.css";
 import { data } from "../data/Explore_Data.js";
 import {
   shortenedSummaryForCardDisplay,
   getSpecificData,
 } from "../helpers/Helper_Functions.js";
+import CardDetails from './CardDetails.js'
 
 // create a function that displays a certain amount of the desc on the explore page
 // have the Like (interest) button on the cards as well
@@ -12,7 +14,7 @@ import {
 // Come back to fix Layout flex start alignment
 
 export default function Card({ type, filters }) {
- 
+    let { path, url } = useRouteMatch();
   // filter data for all entries with the given type
   const categoryData = getSpecificData(data, type);
 
@@ -25,7 +27,7 @@ export default function Card({ type, filters }) {
   });
 
   const displaySpecificData = result.map((element) => {
-    const { id, status, src, title, summary } = element;
+    const { id, status, src, title, summary, type, privacy } = element;
     return (
       <div className="card" id="card-section" key={id}>
         <div className="status-with-img">
@@ -40,7 +42,15 @@ export default function Card({ type, filters }) {
             </div>
           </div>
         </div>
-        <div className="status">View More</div>
+        {type === 'challenge' ?  
+                                <Link to={`/${type}s/challenge/${id}`}>
+                                  <div className="status">View More</div>
+                                </Link> :         
+                                <Link to={`${type}s/${type}/${id}`}>
+                                  <div className="status">View More</div>
+                                </Link>
+        }
+
       </div>
     );
   });

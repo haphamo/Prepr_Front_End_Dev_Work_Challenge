@@ -5,7 +5,7 @@ import "./Nav.css";
 import { randomKeyGenerator, filteredNav } from "../helpers/Helper_Functions";
 
 // Stretch: Create a toggle nav for mobile version
-// map through data in NavData to get a list of all nav items
+// Make Sticky, and add hover css
 
 export default function Nav() {
 

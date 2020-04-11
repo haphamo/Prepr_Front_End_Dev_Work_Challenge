@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import { data } from './data/Explore_Data.js'
 import Header from "./components/Header.js";
 import Nav from "./components/Nav.js";
 import Card from "./components/Card.js";

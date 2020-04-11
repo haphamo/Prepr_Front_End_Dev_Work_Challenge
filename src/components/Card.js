@@ -12,7 +12,7 @@ import {
 // Come back to fix Layout flex start alignment
 
 export default function Card({ type, filters }) {
-  console.log(filters);
+ 
   // filter data for all entries with the given type
   const categoryData = getSpecificData(data, type);
 

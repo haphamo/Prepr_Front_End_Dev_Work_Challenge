@@ -1,0 +1,32 @@
+#filter-categories {
+  height: 3em;
+  font-size: 1em;
+}
+
+.category-container {
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+}
+
+select {
+  border-color: rgb(13, 100, 42);
+}
+
+#filter-categories {
+  letter-spacing: 0.08em;
+}
+
+form * {
+  display: flex;
+  align-items: center;
+  margin: 0.5em;
+}
+
+form > div {
+  border: solid 1px rgb(13, 100, 42);
+  border-radius: 0.5em;
+  background-color: whitesmoke;
+}

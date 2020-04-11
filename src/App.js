@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
 import Header from "./components/Header.js";
 import Nav from "./components/Nav.js";
 import Card from "./components/Card.js";
@@ -7,9 +7,9 @@ import Filter from "./components/Filter.js"
 import CategoryButton from "./components/CategoryButton.js";
 import "./App.css";
 import { categoryDataFromNavData } from "./helpers/Helper_Functions.js";
+import CardDetails from './components/CardDetails.js';
 
 function App() {
-
   const [filters, setFilters] = useState({})
  
   return (
@@ -23,15 +23,25 @@ function App() {
             <Filter filters={filters} setFilters={setFilters}/>
             <Card type="challenge" filters={filters}/>
           </Route>
-          <Route path="/labs">
+          <Route exact path="/labs">
             <CategoryButton path="labs" />
             <Filter filters={filters} setFilters={setFilters}/>
             <Card type="lab"/>
           </Route>
-          <Route path="/projects">
+          <Route exact path="/projects">
             <CategoryButton path="projects"/>
             <Card type="project" />
           </Route>
+          <Route path="/challenges/challenge/:id">
+            <CardDetails />
+          </Route>
+          <Route path="/labs/lab/:id">
+            <CardDetails />
+          </Route>
+          <Route path="/projects/project/:id">
+            <CardDetails />
+          </Route>
+    
         </Switch>
       </Router>
     </div>

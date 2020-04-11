@@ -26,6 +26,7 @@ function App() {
           </Route>
           <Route path="/labs">
             <CategoryButton path="labs" />
+            <Filter filters={filters} setFilters={setFilters}/>
             <Card type="lab"/>
           </Route>
           <Route path="/projects">

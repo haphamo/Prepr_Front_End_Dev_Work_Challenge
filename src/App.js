@@ -10,14 +10,9 @@ import "./App.css";
 import { categoryDataFromNavData } from "./helpers/Helper_Functions.js";
 
 function App() {
-  // const initialFilterState = {
-  //   status: undefined,
-  //   privacy: undefined,
-  //   category: undefined,
-  // }
+
   const [filters, setFilters] = useState({})
  
-
   return (
     <div>
       <Header />

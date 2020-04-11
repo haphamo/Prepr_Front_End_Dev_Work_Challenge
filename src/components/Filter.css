@@ -1,6 +1,6 @@
 #filter-categories {
   height: 3em;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .category-container {
@@ -26,7 +26,7 @@ form * {
 }
 
 form > div {
-  border: solid 1px green;
+  border: solid 1px rgb(13, 100, 42);
   border-radius: 0.5em;
   background-color: whitesmoke;
 }

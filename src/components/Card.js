@@ -8,12 +8,25 @@ import { shortenedSummaryForCardDisplay, getSpecificData } from '../helpers/Help
 // Stretch: Date 
 // Come back to fix Layout flex start alignment
 
-export default function Card({ type }) {
-  // this state will toggle explore views between Challenges, Projects and Labs.
-  // const [view, setView] = useState(type)
+export default function Card({ type, filters }) {
+  console.log(filters)
+  // filter data for all entries with the given type
+  const categoryData = getSpecificData(data, type)
 
-  // Depending on the view state, this will render the data from that view
-  const displaySpecificData = getSpecificData(data, type).map(element => {
+  // filter again with the filters prop
+  const result = categoryData.filter(function(item) {
+    for (let key in filters) {
+
+      if(item[key] === undefined || item[key] !== filters[key])
+      return false
+
+      
+    }
+    return true
+  })
+
+  // console.log(result)
+  const displaySpecificData = result.map(element => {
     const { id, status, src, title, summary } = element
     return(
         <div className="card" id="card-section" key={id}>
@@ -31,7 +44,8 @@ export default function Card({ type }) {
       </div>
     )
   })
-   
+
+
   return(
     <div className="section">
      {displaySpecificData}

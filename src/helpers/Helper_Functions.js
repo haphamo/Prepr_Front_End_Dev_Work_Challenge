@@ -6,7 +6,7 @@ const shortenedSummaryForCardDisplay = function(summary) {
   return `${summary.slice(0, 150)}...`
 }
 
-// This function receives a data obj of all the challenges, projects and labs as objects. It will return an array of the specific type passed in
+// This function receives a data obj of all the challenges, projects and labs as objects. This is the default unfiltered version. It will return an array of the specific type passed in
 const getSpecificData = function(data, type) {
   return Object.values(data).filter(item => item.type === type) 
 }

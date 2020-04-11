@@ -2,21 +2,25 @@ import React, { useState } from "react";
 import './Filter.css'
 
 export default function Filter() {
+  const [categoryValue, setCategoryValue] = useState()
+  const onHandleChange = (evt) => {
+    console.log(evt.target.value)
+  }
   return (
     
     <div className="filter-section">
       <form>
-      <label id="choose-category" for="category">Choose a category</label>
-      <select id="filter-categories">
-        <option disabled selected value> -- select a category -- </option>
-        <option value="Incubators">Incubators</option>
-        <option value="Corporate Innovation Lab">Corporate Innovation Lab</option>
-        <option value="Technology">Technology & Science Park</option>
-        <option value="Entrepreneurship Support Organization">Entrepreneurship Support Organization</option>
-        <option value="Venture Capital">Venture Capital</option>
-        <option value="University">University</option>
-        <option value="High School">High School</option>
-        <option value="Government">Government</option>
+      <label id="choose-category" >Choose a category</label>
+      <select id="filter-categories" value={categoryValue} onChange={onHandleChange}>
+        <option defaultValue value="all"> -- select a category -- </option>
+        <option value="incubators">Incubators</option>
+        <option value="corporate innovation Lab">Corporate Innovation Lab</option>
+        <option value="technology">Technology & Science Park</option>
+        <option value="entrepreneurship support organization">Entrepreneurship Support Organization</option>
+        <option value="venture capital">Venture Capital</option>
+        <option value="university">University</option>
+        <option value="high school">High School</option>
+        <option value="government">Government</option>
       </select>
       <div>
         <input

@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import { categoryDataFromNavData, randomKeyGenerator } from '../helpers/Helper_Functions.js'
 import { navigationItems } from "../data/Nav_Data.js";
 import './CategoryButton.css'
-// import classnames from 'classnames';
-
 
 export default function CategoryButton(props) {
  
-  console.log(props.path)
   const categoryButtons = navigationItems.filter(categoryDataFromNavData)
 
   categoryButtons.sort((a, b) => {
@@ -20,10 +17,7 @@ export default function CategoryButton(props) {
   const allCategoryButtons = categoryButtons.map(category => {
     const { name, src, alt, path } = category
 
-  //   const categoryClass = classnames("category", {
-  //     selected: challenge,
-  //     unselected: !challenge,
-  //  })
+    // function that determines active state based off the path(URL)
     const active = function(path) {
       if(props.path === path) {
         return `--selected`
@@ -33,9 +27,7 @@ export default function CategoryButton(props) {
     return(
       
       <Link to={`/${path}`} key={randomKeyGenerator()} className={`category${active(path)}`}>
-        {/* <div className="category"> */}
           {name}
-        {/* </div> */}
       </Link>
     )
   })

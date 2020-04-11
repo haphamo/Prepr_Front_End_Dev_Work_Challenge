@@ -12,15 +12,18 @@ function App() {
       <Header />
       <Router>
         <Nav />
-        <CategoryButton />
+        
         <Switch>
           <Route exact path="/">
+            <CategoryButton path=""/>
             <Card type="challenge" />
           </Route>
           <Route path="/labs">
+            <CategoryButton path="labs"/>
             <Card type="lab" />
           </Route>
           <Route path="/projects">
+            <CategoryButton path="projects"/>
             <Card type="project" />
           </Route>
         </Switch>

@@ -1,8 +1,18 @@
 .category {
   text-align: center;
+  color: rgb(84, 160, 14);
+  align-items: center;
+  background-color: whitesmoke;
+  width: 6em;
+  padding: 1em;
+  margin: 0em 0.5em;
+  border-radius: 0.5em;
+}
+
+.category:hover{
+  text-align: center;
   color: whitesmoke;
   align-items: center;
-  /* border: solid 2px rgb(131, 204, 112); */
   background-color: rgb(84, 160, 14);
   width: 6em;
   padding: 1em;
@@ -13,5 +23,15 @@
 .category-container {
   display: flex;
   justify-content: flex-start;
-  
+}
+
+.category--selected {
+  color: whitesmoke;
+  background-color: rgb(84, 160, 14);
+  text-align: center;
+  align-items: center;
+  width: 6em;
+  padding: 1em;
+  margin: 0em 0.5em;
+  border-radius: 0.5em;
 }

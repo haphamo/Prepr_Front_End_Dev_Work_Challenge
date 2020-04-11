@@ -57,7 +57,23 @@ export default function Card({ type, filters }) {
 
   return (
     <div>
+    <div>
       {result.length > 0 ?  <div className="section">{displaySpecificData}</div> : <div>There are no {`${type}s`} available!</div>}
+    </div>
+    <Router>
+      <Switch>
+        <Route path="/challenges/challenge/:id">
+          <CardDetails />
+        </Route>
+        <Route path="/labs/lab/:id">
+          <CardDetails />
+        </Route>
+        <Route path="/projects/project/:id">
+          <CardDetails />
+        </Route>
+      </Switch>
+    </Router>
+
     </div>
   )
 }

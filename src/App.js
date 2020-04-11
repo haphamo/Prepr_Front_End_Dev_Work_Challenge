@@ -32,16 +32,6 @@ function App() {
             <CategoryButton path="projects"/>
             <Card type="project" />
           </Route>
-          <Route path="/challenges/challenge/:id">
-            <CardDetails />
-          </Route>
-          <Route path="/labs/lab/:id">
-            <CardDetails />
-          </Route>
-          <Route path="/projects/project/:id">
-            <CardDetails />
-          </Route>
-    
         </Switch>
       </Router>
     </div>

@@ -24,7 +24,6 @@ export default function Card({ type, filters }) {
     return true;
   });
 
-  // console.log(result)
   const displaySpecificData = result.map((element) => {
     const { id, status, src, title, summary } = element;
     return (
@@ -46,5 +45,9 @@ export default function Card({ type, filters }) {
     );
   });
 
-  return <div className="section">{displaySpecificData}</div>;
+  return (
+    <div>
+      {result.length > 0 ?  <div className="section">{displaySpecificData}</div> : <div>There are no {`${type}s`} with these filters, try something else!</div>}
+    </div>
+  )
 }

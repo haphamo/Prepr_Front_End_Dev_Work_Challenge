@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import './Filter.css'
-
+import './Filter.css';
+import Button from './Button.js';
 // create button to remove all filters
 
 export default function Filter({ filters, setFilters }) {
@@ -37,6 +37,10 @@ export default function Filter({ filters, setFilters }) {
     setFilters(allFilters)
   }
 
+  const clearFilters = () => {
+    alert('here')
+  }
+
   return (
     
     <div className="filter-section">
@@ -53,6 +57,7 @@ export default function Filter({ filters, setFilters }) {
         <option value="high-school">High School</option>
         <option value="government">Government</option>
       </select>
+
       <div>
         <input
           type="radio"
@@ -72,6 +77,7 @@ export default function Filter({ filters, setFilters }) {
         ></input>
         <label for="Private">Private</label>
       </div>
+   
       <div>
         <input
           type="radio"
@@ -91,7 +97,9 @@ export default function Filter({ filters, setFilters }) {
         ></input>
         <label for="Local">Local</label>
       </div>
-      <button type="submit">Apply filters</button>
+      <hr id="filters"/>
+      <Button name="remove filters" type="reset"></Button>
+      <Button name="apply" type="submit"></Button>
     </form>
     </div>
   );

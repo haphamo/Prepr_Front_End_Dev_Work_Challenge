@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom'; 
 import { data } from '../data/Explore_Data.js';
 import './CardDetails.css'
+import Tags from './Tags.js'
 
 export default function CardDetails() {
   let { id } = useParams()
@@ -30,7 +31,7 @@ export default function CardDetails() {
         </div>
         <div className="top-section-footer">
           <div className="challenge-tags">
-              TagOne
+              <Tags />
           </div>
         </div>
       </div>

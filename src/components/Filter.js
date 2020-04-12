@@ -41,7 +41,7 @@ export default function Filter({ filters, setFilters }) {
     
     <div className="filter-section">
       <form onSubmit={handleSubmit}>
-      <label id="choose-category" >Choose a category</label>
+      {/* <label id="choose-category" >Choose a category</label> */}
       <select id="filter-categories" value={filterCategoryValue} onChange={onFilterCategoryChange}>
         <option defaultValue value="all"> -- select a category -- </option>
         <option value="incubators">Incubators</option>

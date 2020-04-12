@@ -4,6 +4,7 @@ import c3 from '../assets/c3.png'
 import c4 from '../assets/c4.png'
 import c5 from '../assets/c5.png'
 import c6 from '../assets/c6.png'
+import c7 from '../assets/c7.png'
 import l1 from '../assets/l1.png'
 import l2 from '../assets/l2.png'
 import l3 from '../assets/l3.png'
@@ -116,4 +117,17 @@ export const data = {
         tags: ['tagOne', 'tagTwo'],
         createdOn: '01/04/2020'
       },
+  10: {
+        id: 10,
+        type: 'challenge',
+        status: 'closed',
+        privacy: 'public',
+        src: c7,
+        title: 'Healthcare & Artificial Intelligence',
+        summary: "The healthcare industry is quickly being affected by new technology and new processes. New developments in various fields are changing the way the healthcare industry operates. These developments also present challenges going forward. Work with the futur{e}challenge to help solve these challenges and make a difference in the healthcare industry.",
+        startDate: 'Oct 11th 2019',
+        endDate: 'Feb 20th 2020',
+        category: 'incubator',
+        challengeTags: []
+      }
 }

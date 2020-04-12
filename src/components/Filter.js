@@ -22,7 +22,7 @@ export default function Filter({ filters, setFilters }) {
 
   const handleSubmit = function(evt) {
     evt.preventDefault()
-    const allFilters = {}
+    let allFilters = {...filters}
 
     if(filterCategoryValue) {
       allFilters['category'] = filterCategoryValue
@@ -33,12 +33,13 @@ export default function Filter({ filters, setFilters }) {
     if(filterLocationValue) {
       allFilters['location'] = filterLocationValue
     }
-    // console.log(allFilters)
+    console.log(allFilters)
     setFilters(allFilters)
   }
 
-  const clearFilters = () => {
-    alert('here')
+  // clears filters
+  const clearFilters = function() {
+    setFilters({})
   }
 
   return (
@@ -48,7 +49,7 @@ export default function Filter({ filters, setFilters }) {
       {/* <label id="choose-category" >Choose a category</label> */}
       <select id="filter-categories" value={filterCategoryValue} onChange={onFilterCategoryChange}>
         <option defaultValue value="all"> -- select a category -- </option>
-        <option value="incubators">Incubators</option>
+        <option value="incubator">Incubators</option>
         <option value="corporate">Corporate Innovation Lab</option>
         <option value="technology">Technology & Science Park</option>
         <option value="entrepreneurship">Entrepreneurship Support Organization</option>
@@ -65,7 +66,6 @@ export default function Filter({ filters, setFilters }) {
           name="public private"
           value="public"
           onChange={onFilterPrivacyChange}
-          // checked
         ></input>
         <label for="public">Public</label>
         <input
@@ -83,9 +83,7 @@ export default function Filter({ filters, setFilters }) {
           type="radio"
           id="all"
           name="all local"
-          // value="all"
           onChange={onFilterLocationChange}
-          defaultValue="all"
         ></input>
         <label for="all">All</label>
         <input
@@ -98,8 +96,8 @@ export default function Filter({ filters, setFilters }) {
         <label for="Local">Local</label>
       </div>
       <hr id="filters"/>
-      <Button name="remove filters" type="reset"></Button>
-      <Button name="apply" type="submit"></Button>
+      <Button name="remove filters" type="reset" onClick={clearFilters}></Button>
+      <Button name="apply" type="submit" ></Button>
     </form>
     </div>
   );

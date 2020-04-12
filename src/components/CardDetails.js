@@ -4,6 +4,8 @@ import { data } from '../data/Explore_Data.js';
 import './CardDetails.css'
 import Tags from './Tags.js'
 
+// Determine that open and closed state by finding the date and the deadline date
+
 export default function CardDetails() {
   let { id } = useParams()
 

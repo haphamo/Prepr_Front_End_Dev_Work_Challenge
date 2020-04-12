@@ -13,6 +13,7 @@ import CardDetails from './CardDetails.js'
 // Stretch: Date
 // Come back to fix Layout flex start alignment
 // add the remaining footer items in browse challenges
+// only display open items ?? 
 
 export default function Card({ type, filters }) {
     let { path, url } = useRouteMatch();

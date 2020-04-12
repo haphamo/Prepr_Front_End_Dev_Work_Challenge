@@ -12,6 +12,7 @@ import CardDetails from './CardDetails.js'
 // have the Like (interest) button on the cards as well
 // Stretch: Date
 // Come back to fix Layout flex start alignment
+// add the remaining footer items in browse challenges
 
 export default function Card({ type, filters }) {
     let { path, url } = useRouteMatch();
@@ -44,10 +45,10 @@ export default function Card({ type, filters }) {
         </div>
         {type === 'challenge' ?  
                                 <Link to={`/${type}s/challenge/${id}`}>
-                                  <div className="status">View More</div>
+                                  <div className="view-more">View More</div>
                                 </Link> :         
                                 <Link to={`${url}/${type}/${id}`}>
-                                  <div className="status">View More</div>
+                                  <div className="view-more">View More</div>
                                 </Link>
         }
 
@@ -55,8 +56,8 @@ export default function Card({ type, filters }) {
     );
   });
 
-  console.log('path',path)
-  console.log('url',url)
+  // console.log('path',path)
+  // console.log('url',url)
   return (
     <div>
       <div>

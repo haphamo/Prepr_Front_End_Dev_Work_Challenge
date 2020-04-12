@@ -33,13 +33,8 @@ export default function CategoryButton(props) {
   })
 
   return(
-    <Fragment>
     <div className="category-container">
       {allCategoryButtons}
-      
     </div>
-    
-    </Fragment>
-
   )
 }

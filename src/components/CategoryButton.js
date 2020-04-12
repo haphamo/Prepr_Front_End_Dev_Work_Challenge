@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
 import { categoryDataFromNavData, randomKeyGenerator } from '../helpers/Helper_Functions.js'
 import { navigationItems } from "../data/Nav_Data.js";
@@ -27,14 +27,19 @@ export default function CategoryButton(props) {
     return(
       
       <Link to={`/${path}`} key={randomKeyGenerator()} className={`category${active(path)}`}>
-          {name}
+          {name.toUpperCase()}
       </Link>
     )
   })
 
   return(
+    <Fragment>
     <div className="category-container">
       {allCategoryButtons}
+      
     </div>
+    
+    </Fragment>
+
   )
 }

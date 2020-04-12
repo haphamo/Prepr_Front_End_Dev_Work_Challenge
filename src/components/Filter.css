@@ -32,9 +32,18 @@ form > div {
   background-color: whitesmoke;
 }
 
-hr {
+hr #filters {
   height: auto;
   color: green;
   background-color: darkgrey;
   border: solid 1px darkgrey;
+}
+
+#below-categories {
+  width: 70%;
+  color: green;
+  /* background-color: darkgrey; */
+  border: solid 1px darkgrey;
+  margin: 0;
+
 }

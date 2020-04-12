@@ -1,0 +1,40 @@
+.card-details-container {
+  display: flex;
+  justify-content: center;
+}
+
+.top-section {
+  background-color: whitesmoke;
+  box-shadow:  0 2px 5px #23222233;
+  margin: 0em 2em;
+  width: 83em;
+}
+
+.top-section * {
+  margin: 0em 0.5em 0.5em;
+}
+.top-section-header {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0.5em; */
+}
+
+#card-details-title {
+  font-size: 1.7em;
+  margin: 1em;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+
+.top-section-body {
+  display: flex;
+}
+.cover-photo {
+  width: 100%;
+}
+#cover-photo {
+  width: 100%;
+}

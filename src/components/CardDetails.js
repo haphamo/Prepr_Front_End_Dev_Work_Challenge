@@ -34,15 +34,12 @@ export default function CardDetails() {
                 <div className="deadline-date">Submission Deadline Date: {endDate}</div>
                 <div className="scoring"></div>
                 <div className="requirements"></div>
-                
               </Fragment>
             }
             {type === "lab" && 
               <div className="created-on">Created On: {createdOn}</div>
             }
-
           </div>
-
         </div>
         <div className="top-section-footer">
           <div className="challenge-tags">

@@ -26,7 +26,7 @@ export default function CategoryButton(props) {
     }
     return(
       
-      <Link to={`/${path}`} key={randomKeyGenerator()} className={`category${active(path)}`}>
+      <Link to={`/${path}`} key={randomKeyGenerator()} className={`category category${active(path)}`}>
           {name.toUpperCase()}
       </Link>
     )

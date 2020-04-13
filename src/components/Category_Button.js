@@ -27,7 +27,7 @@ export default function CategoryButton(props) {
 
     return(
       // In the path name in the link of the category buttons, explore goes to '/' while labs and projects goes to /name
-      <div className="nav-item" key={randomKeyGenerator()} className={`category category${active(path)}`}>
+      <div key={randomKeyGenerator()} className={`category category${active(path)}`}>
         {name === "Challenges" ? 
           <Link to={`/${path}`}  >
             {name.toUpperCase()}

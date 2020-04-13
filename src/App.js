@@ -8,7 +8,7 @@ import CategoryButton from "./components/Category_Button.js";
 import "./App.css";
 // import { categoryDataFromNavData } from "./helpers/Helper_Functions.js";
 import CardDetails from './components/Card_Details.js';
-import Projects from './components/Projects.js'
+import MyProjects from './components/My_Projects.js'
 
 function App() {
   const [filters, setFilters] = useState({})
@@ -44,6 +44,11 @@ function App() {
           </Route>
           <Route path="/labs/lab/:id">
             <CardDetails />
+          </Route>
+
+
+          <Route path="/my-projects">
+            <MyProjects />
           </Route>
         </Switch>
       </Router>

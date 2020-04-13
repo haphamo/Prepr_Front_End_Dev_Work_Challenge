@@ -1,4 +1,6 @@
 .project-section {
   background-color: whitesmoke;
   padding: 1em 0em;
+  display: flex;
+  justify-content: space-evenly;
 }

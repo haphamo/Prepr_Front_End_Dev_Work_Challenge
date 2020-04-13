@@ -9,9 +9,9 @@ export default function Filter({ filters, setFilters }) {
   const [filterCategoryValue, setFilterCategoryValue] = useState(undefined)
   const [filterPrivacyValue, setFilterPrivacyValue] = useState(undefined)
   const [filterLocationValue, setFilterLocationValue] = useState(undefined)
-  console.log('categoryState', filterCategoryValue)
+  // console.log('categoryState', filterCategoryValue)
   console.log('privacy State', filterPrivacyValue)
-  console.log('locationstate', filterLocationValue)
+  // console.log('locationstate', filterLocationValue)
 
   const onFilterCategoryChange = (evt) => {
     setFilterCategoryValue(evt.target.value)

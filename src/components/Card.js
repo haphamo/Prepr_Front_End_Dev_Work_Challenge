@@ -23,10 +23,6 @@ export default function Card({ type, filters }) {
   // filter again with the filters prop
   const result = categoryData.filter(function (item) {
     for (let key in filters) {
-      // console.log(key)
-      // console.log(item)
-      // console.log(item[key])
-      // console.log(filters[key])
       if (item[key] === undefined || item[key] !== filters[key]) return false;
     }
     return true;

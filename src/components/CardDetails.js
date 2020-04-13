@@ -13,7 +13,6 @@ export default function CardDetails() {
 
   const dataForCardDetails = Object.values(data).filter(item => item.id === parseInt(id))
   const { status, type, title, summary, startDate, endDate, src, createdOn } = (dataForCardDetails[0])
-  console.log(startDate)
   return(
     <div className="card-details-container">
       <div className="top-section">

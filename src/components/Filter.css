@@ -9,6 +9,7 @@
 
 form {
   display: flex;
+  background-color: whitesmoke;
 }
 
 select {
@@ -29,4 +30,20 @@ form > div {
   border: solid 1px rgb(13, 100, 42);
   border-radius: 0.5em;
   background-color: whitesmoke;
+}
+
+hr #filters {
+  height: auto;
+  color: green;
+  background-color: darkgrey;
+  border: solid 1px darkgrey;
+}
+
+#below-categories {
+  width: 70%;
+  color: green;
+  /* background-color: darkgrey; */
+  border: solid 1px darkgrey;
+  margin: 0;
+
 }

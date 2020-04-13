@@ -1,28 +1,33 @@
 import React, { useState } from "react";
-import './Filter.css'
-
-// create button to remove all filters
+import './Filter.css';
+import Button from './Button.js';
+// fix the filter functionality
+// have the apply filters be disabled until the state changes
 
 export default function Filter({ filters, setFilters }) {
 
-  const [filterCategoryValue, setFilterCategoryValue] = useState()
-  const [filterPrivacyValue, setFilterPrivacyValue] = useState()
-  const [filterLocationValue, setFilterLocationValue] = useState()
-
+  const [filterCategoryValue, setFilterCategoryValue] = useState(undefined)
+  const [filterPrivacyValue, setFilterPrivacyValue] = useState(undefined)
+  const [filterLocationValue, setFilterLocationValue] = useState(undefined)
+  console.log('categoryState', filterCategoryValue)
+  console.log('privacy State', filterPrivacyValue)
+  console.log('locationstate', filterLocationValue)
 
   const onFilterCategoryChange = (evt) => {
     setFilterCategoryValue(evt.target.value)
   }
   const onFilterPrivacyChange = (evt) => {
     setFilterPrivacyValue(evt.target.value)
+    console.log('new privacy state', filterPrivacyValue)
   }
   const onFilterLocationChange = (evt) => {
     setFilterLocationValue(evt.target.value)
   }
+  
+  let allFilters = {...filters}
 
   const handleSubmit = function(evt) {
     evt.preventDefault()
-    const allFilters = {}
 
     if(filterCategoryValue) {
       allFilters['category'] = filterCategoryValue
@@ -33,18 +38,26 @@ export default function Filter({ filters, setFilters }) {
     if(filterLocationValue) {
       allFilters['location'] = filterLocationValue
     }
-    // console.log(allFilters)
+    console.log(allFilters)
     setFilters(allFilters)
   }
 
+  // clears filters
+  const clearFilters = () => {
+    setFilterCategoryValue(undefined)
+    setFilterLocationValue(undefined)
+    setFilterPrivacyValue(undefined)
+    console.log('hit clearFitlersFunction')
+    setFilters({})
+    console.log('fitlers after clear', filters)
+  }
+
   return (
-    
     <div className="filter-section">
       <form onSubmit={handleSubmit}>
-      {/* <label id="choose-category" >Choose a category</label> */}
       <select id="filter-categories" value={filterCategoryValue} onChange={onFilterCategoryChange}>
-        <option defaultValue value="all"> -- select a category -- </option>
-        <option value="incubators">Incubators</option>
+        <option defaultValue value=""> -- select a category -- </option>
+        <option value="incubator">Incubators</option>
         <option value="corporate">Corporate Innovation Lab</option>
         <option value="technology">Technology & Science Park</option>
         <option value="entrepreneurship">Entrepreneurship Support Organization</option>
@@ -53,6 +66,7 @@ export default function Filter({ filters, setFilters }) {
         <option value="high-school">High School</option>
         <option value="government">Government</option>
       </select>
+
       <div>
         <input
           type="radio"
@@ -60,7 +74,6 @@ export default function Filter({ filters, setFilters }) {
           name="public private"
           value="public"
           onChange={onFilterPrivacyChange}
-          // checked
         ></input>
         <label for="public">Public</label>
         <input
@@ -72,26 +85,33 @@ export default function Filter({ filters, setFilters }) {
         ></input>
         <label for="Private">Private</label>
       </div>
+   
       <div>
         <input
           type="radio"
           id="all"
           name="all local"
-          // value="all"
+          value="all"
           onChange={onFilterLocationChange}
-          defaultValue="all"
         ></input>
-        <label for="all">All</label>
+        <label>All</label>
         <input
           type="radio"
           id="private"
-          name="all local"
           value="local"
+          name="all local"
           onChange={onFilterLocationChange}
         ></input>
-        <label for="Local">Local</label>
+        <label>Local</label>
       </div>
-      <button type="submit">Apply filters</button>
+      <hr id="filters"/>
+      <Button name="remove-filters" type="reset" clearFilters={clearFilters}></Button>
+      <Button name="apply" type="submit" ></Button>
+      {/* <Button name="submit" type="button" ></Button>
+
+      <Button name="follow" type="button" ></Button>
+      <Button name="unfollow" type="button" ></Button>
+      <Button name="like" type="button" ></Button> */}
     </form>
     </div>
   );

@@ -121,7 +121,7 @@ export const data = {
         id: 10,
         type: 'challenge',
         status: 'closed',
-        privacy: 'public',
+        privacy: 'private',
         src: c7,
         title: 'Healthcare & Artificial Intelligence',
         summary: "The healthcare industry is quickly being affected by new technology and new processes. New developments in various fields are changing the way the healthcare industry operates. These developments also present challenges going forward. Work with the futur{e}challenge to help solve these challenges and make a difference in the healthcare industry.",

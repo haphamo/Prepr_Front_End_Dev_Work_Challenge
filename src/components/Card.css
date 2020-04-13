@@ -28,3 +28,17 @@
 .view-more {
   text-align: right;
 }
+
+.card-status {
+  width: fit-content;
+  padding: 0.2em;
+  letter-spacing: 0.1em;
+}
+
+.card-status.open {
+  background-color: rgb(243, 163, 59);
+}
+.card-status.closed {
+  background-color: rgb(35, 73, 9);
+  color: whitesmoke;
+}

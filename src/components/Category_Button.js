@@ -7,7 +7,7 @@ import './Category_Button.css'
 export default function CategoryButton(props) {
  
   const categoryButtons = navigationItems.filter(categoryDataFromNavData)
-
+  // Just sorts so the order of the categories, is Challenges, Labs, and Projects
   categoryButtons.sort((a, b) => {
     if(a.name < b.name) { return -1; }
     if(a.name > b.name) { return 1; }
@@ -24,11 +24,19 @@ export default function CategoryButton(props) {
       }
       return ""
     }
+    
     return(
-      
-      <Link to={`/${path}`} key={randomKeyGenerator()} className={`category category${active(path)}`}>
-          {name.toUpperCase()}
-      </Link>
+      // In the path name in the link of the category buttons, explore goes to '/' while labs and projects goes to /name
+      <div className="nav-item" key={randomKeyGenerator()} className={`category category${active(path)}`}>
+        {name === "explore" ? 
+          <Link to={`/${path}`}  >
+            {name.toUpperCase()}
+          </Link> 
+          : 
+          <Link to={`/${name.toLowerCase()}`} >
+            {name.toUpperCase()}
+          </Link>}
+      </div>
     )
   })
 

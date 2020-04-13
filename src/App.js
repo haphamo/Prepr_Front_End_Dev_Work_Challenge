@@ -31,7 +31,7 @@ function App() {
           </Route>
           <Route exact path="/projects">
             <CategoryButton path="projects" />
-            <Projects />
+           
             <Card type="project"/>
           </Route>
 

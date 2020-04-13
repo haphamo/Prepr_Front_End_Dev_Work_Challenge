@@ -20,7 +20,7 @@ export const navigationItems = [
     name: "Projects",
     src: projects,
     alt: "explore projects",
-    path: "projects"
+    path: "my-projects"
   },
   {
     name: "Labs",
@@ -38,31 +38,36 @@ export const navigationItems = [
     name: "Achievements",
     src: achievements,
     alt: "View achievements",
+    path: "achievements"
   },
   {
     name: "Inbox",
     src: inbox,
     alt: "View inbox",
+    path: "inbox"
   },
   {
     name: "Resources",
     src: resources,
     alt: "View resources",
+    path: "resources"
   },
   {
     name: "NewsFeed",
     src: newsfeed,
     alt: "View newsfeed",
+    path: "newsfeed"
   },
   {
     name: "Notifications",
     src: notifications,
     alt: "View notifications",
-    
+    path: "notifications"
   },
   {
     name: "Organizations",
     src: organizations,
-    alt: "View organizations"
+    alt: "View organizations",
+    path: "organizations"
   },
 ]

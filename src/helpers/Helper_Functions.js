@@ -16,8 +16,8 @@ const filteredNav = function(navItem) {
   switch(navItem.name) {
     case "Challenges":
       return false;
-    case "Projects":
-      return false;
+    // case "Projects":
+    //   return false;
     case "Labs":
       return false;
     default:

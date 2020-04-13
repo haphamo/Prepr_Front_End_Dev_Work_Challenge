@@ -27,6 +27,16 @@
 .status {
   display: flex;
   align-items: center;
+  height: fit-content;
+  margin: 1em;
+  padding: 1em;
+}
+.status.open {
+  background-color: rgb(243, 163, 59);
+}
+.status.closed {
+  background-color: rgb(35, 73, 9);
+  color: whitesmoke
 }
 
 .top-section-body {

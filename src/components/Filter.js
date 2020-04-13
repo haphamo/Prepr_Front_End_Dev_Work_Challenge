@@ -1,28 +1,33 @@
 import React, { useState } from "react";
 import './Filter.css';
 import Button from './Button.js';
-// create button to remove all filters
+// fix the filter functionality
+// have the apply filters be disabled until the state changes
 
 export default function Filter({ filters, setFilters }) {
 
-  const [filterCategoryValue, setFilterCategoryValue] = useState()
-  const [filterPrivacyValue, setFilterPrivacyValue] = useState()
-  const [filterLocationValue, setFilterLocationValue] = useState()
-
+  const [filterCategoryValue, setFilterCategoryValue] = useState(undefined)
+  const [filterPrivacyValue, setFilterPrivacyValue] = useState(undefined)
+  const [filterLocationValue, setFilterLocationValue] = useState(undefined)
+  console.log('categoryState', filterCategoryValue)
+  console.log('privacy State', filterPrivacyValue)
+  console.log('locationstate', filterLocationValue)
 
   const onFilterCategoryChange = (evt) => {
     setFilterCategoryValue(evt.target.value)
   }
   const onFilterPrivacyChange = (evt) => {
     setFilterPrivacyValue(evt.target.value)
+    console.log('new privacy state', filterPrivacyValue)
   }
   const onFilterLocationChange = (evt) => {
     setFilterLocationValue(evt.target.value)
   }
+  
+  let allFilters = {...filters}
 
   const handleSubmit = function(evt) {
     evt.preventDefault()
-    let allFilters = {...filters}
 
     if(filterCategoryValue) {
       allFilters['category'] = filterCategoryValue
@@ -38,17 +43,20 @@ export default function Filter({ filters, setFilters }) {
   }
 
   // clears filters
-  const clearFilters = function() {
+  const clearFilters = () => {
+    setFilterCategoryValue(undefined)
+    setFilterLocationValue(undefined)
+    setFilterPrivacyValue(undefined)
+    console.log('hit clearFitlersFunction')
     setFilters({})
+    console.log('fitlers after clear', filters)
   }
 
   return (
-    
     <div className="filter-section">
       <form onSubmit={handleSubmit}>
-      {/* <label id="choose-category" >Choose a category</label> */}
       <select id="filter-categories" value={filterCategoryValue} onChange={onFilterCategoryChange}>
-        <option defaultValue value="all"> -- select a category -- </option>
+        <option defaultValue value=""> -- select a category -- </option>
         <option value="incubator">Incubators</option>
         <option value="corporate">Corporate Innovation Lab</option>
         <option value="technology">Technology & Science Park</option>
@@ -83,21 +91,27 @@ export default function Filter({ filters, setFilters }) {
           type="radio"
           id="all"
           name="all local"
+          value="all"
           onChange={onFilterLocationChange}
         ></input>
-        <label for="all">All</label>
+        <label>All</label>
         <input
           type="radio"
           id="private"
-          name="all local"
           value="local"
+          name="all local"
           onChange={onFilterLocationChange}
         ></input>
-        <label for="Local">Local</label>
+        <label>Local</label>
       </div>
       <hr id="filters"/>
-      <Button name="remove filters" type="reset" onClick={clearFilters}></Button>
+      <Button name="remove-filters" type="reset" clearFilters={clearFilters}></Button>
       <Button name="apply" type="submit" ></Button>
+      {/* <Button name="submit" type="button" ></Button>
+
+      <Button name="follow" type="button" ></Button>
+      <Button name="unfollow" type="button" ></Button>
+      <Button name="like" type="button" ></Button> */}
     </form>
     </div>
   );

@@ -8,8 +8,13 @@
   border-style: outset;
 }
 
-.button:hover {
+form > .button:hover  {
   box-shadow: 0 2px 5px 2px #23222233;
   cursor: pointer;
   border-style: inset;
+}
+
+.button.submit {
+  background-color: rgb(194, 35, 35);
+  border: solid 1px rgb(153, 36, 36);
 }

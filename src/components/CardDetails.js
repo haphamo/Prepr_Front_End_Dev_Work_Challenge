@@ -48,7 +48,6 @@ export default function CardDetails() {
           <div className="challenge-tags">
               <Tags />
               
-      <Button name="closed" type="button" ></Button>
           </div>
         </div>
       </div>

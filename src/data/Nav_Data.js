@@ -15,50 +15,47 @@ export const navigationItems = [
     name: "Explore",
     src: explore,
     alt: "explore challenges labs and projects",
-    path: ""
   },
   {
     name: "Projects",
     src: projects,
     alt: "explore projects",
-    path: "projects"
   },
   {
     name: "Labs",
     src: labs,
     alt: "explore labs",
-    path: "labs"
   },
   {
     name: "Challenges",
     src: challenges,
     alt: "explore challenges",
-    path: ""
   },
   {
     name: "Achievements",
     src: achievements,
-    alt: "View achievements"
+    alt: "View achievements",
   },
   {
     name: "Inbox",
     src: inbox,
-    alt: "View inbox"
+    alt: "View inbox",
   },
   {
     name: "Resources",
     src: resources,
-    alt: "View resources"
+    alt: "View resources",
   },
   {
-    name: "News Feed",
+    name: "NewsFeed",
     src: newsfeed,
-    alt: "View newsfeed"
+    alt: "View newsfeed",
   },
   {
     name: "Notifications",
     src: notifications,
-    alt: "View notifications"
+    alt: "View notifications",
+    
   },
   {
     name: "Organizations",

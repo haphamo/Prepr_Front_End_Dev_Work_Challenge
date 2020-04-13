@@ -136,10 +136,40 @@ export const data = {
         challengeTags: []
       },
   11: {
-    id: 11,
-    type: 'project',
-    src: p1,
-    title: 'Front End Developer Summer Internship Challenge',
-    summary: 'Some project Summary',
-  }
+        id: 11,
+        type: 'project',
+        src: p1,
+        title: 'Front End Developer Summer Internship Challenge',
+        summary: 'Some project Summary',
+      },
+  12: {
+        id: 12,
+        type: 'project',
+        src: p2,
+        title: 'Front End Developer Summer Internship Challenge',
+        summary: 'Some project Summary',
+      },
+  13: {
+        id: 13,
+        type: 'project',
+        src: p3,
+        title: 'Front End Developer Summer Internship Challenge',
+        summary: 'Some project Summary',
+      },
+  14: {
+        id: 14,
+        type: 'project',
+        src: p4,
+        title: 'Front End Developer Summer Internship Challenge',
+        summary: 'Some project Summary',
+      },
+  15: {
+        id: 15,
+        type: 'project',
+        src: p5,
+        title: 'Front End Developer Summer Internship Challenge',
+        summary: 'Some project Summary',
+      },
+
+
 }

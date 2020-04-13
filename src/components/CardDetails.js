@@ -19,7 +19,6 @@ export default function CardDetails() {
         <div className="top-section-header">
           <div className="title" id="card-details-title">{title}</div>
           {status && <div className={`status ${status}`}>{status.toUpperCase()}</div>}
-          {/* <Button name={status} type="button" ></Button> */}
         </div>
         <div className="top-section-body">
           <div className="cover-photo">

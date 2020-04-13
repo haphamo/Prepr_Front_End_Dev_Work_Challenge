@@ -5,20 +5,14 @@
   background-color: whitesmoke;
   width: 6em;
   padding: 1em;
-  /* margin: 0em 0.5em; */
-  /* border-radius: 0.5em; */
+  display: flex;
+  justify-content: center;
   border: solid;
 }
 
 .category:hover{
-  text-align: center;
   color: whitesmoke;
-  align-items: center;
   background-color: rgb(13, 100, 42);
-  width: 6em;
-  padding: 1em;
-  /* margin: 0em 0.5em; */
-  /* border-radius: 0.5em; */
 }
 
 .category-container {
@@ -31,15 +25,9 @@
   font-weight: 700;
 }
 
-.category--selected {
+.category.category--selected {
   color: whitesmoke;
   background-color: rgb(13, 100, 42);
-  text-align: center;
-  align-items: center;
-  width: 6em;
-  padding: 1em;
-  /* margin: 0em 0.5em; */
-  /* border-radius: 0.5em; */
 }
 
 .category-container > a {

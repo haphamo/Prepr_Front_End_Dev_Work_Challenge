@@ -8,6 +8,11 @@ import c7 from '../assets/c7.png'
 import l1 from '../assets/l1.png'
 import l2 from '../assets/l2.png'
 import l3 from '../assets/l3.png'
+import p1 from '../assets/p1.jpeg'
+import p2 from '../assets/p2.jpeg'
+import p3 from '../assets/p3.png'
+import p4 from '../assets/p4.jpeg'
+import p5 from '../assets/p5.png'
 
 // add challenge category
 export const data = {
@@ -129,5 +134,12 @@ export const data = {
         endDate: 'Feb 20th 2020',
         category: 'incubator',
         challengeTags: []
-      }
+      },
+  11: {
+    id: 11,
+    type: 'project',
+    src: p1,
+    title: 'Front End Developer Summer Internship Challenge',
+    summary: 'Some project Summary',
+  }
 }

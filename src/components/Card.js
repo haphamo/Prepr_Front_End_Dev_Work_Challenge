@@ -33,7 +33,7 @@ export default function Card({ type, filters }) {
     return (
       <div className="card" id="card-section" key={id}>
         <div className="status-with-img">
-          <div className={`card-status ${status}`}>{status.toUpperCase()} </div>
+          {status && <div className={`card-status ${status}`}>{status.toUpperCase()} </div>}
           <div className="img-section">
             <img id="challenge-photo" alt="img-preview" src={src}></img>
           </div>
@@ -57,7 +57,7 @@ export default function Card({ type, filters }) {
     );
   });
 
-  // console.log('path',path)
+  console.log('data',displaySpecificData)
   // console.log('url',url)
   return (
     <div>

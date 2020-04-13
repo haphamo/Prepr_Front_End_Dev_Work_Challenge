@@ -18,7 +18,7 @@ export default function CardDetails() {
       <div className="top-section">
         <div className="top-section-header">
           <div id="card-details-title">{title}</div>
-          <div className={`status ${status}`}>{status.toUpperCase()}</div>
+          {status && <div className={`status ${status}`}>{status.toUpperCase()}</div>}
           {/* <Button name={status} type="button" ></Button> */}
         </div>
         <div className="top-section-body">

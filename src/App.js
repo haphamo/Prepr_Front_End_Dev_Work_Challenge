@@ -29,8 +29,8 @@ function App() {
             <Card type="lab" filters={filters}/>
           </Route>
           <Route exact path="/projects">
-            <CategoryButton path="projects"/>
-            <Card type="project" />
+            <CategoryButton path="projects" />
+            <Card type="project"/>
           </Route>
 
 

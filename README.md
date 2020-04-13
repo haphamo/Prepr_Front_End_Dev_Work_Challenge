@@ -5,15 +5,15 @@ The task is to redesign a few key pages of the Prepr Network.
 
 Reimagine and create frontend webpages of the following pages (and possible sub-pages):
 
-Explore page (https://preprlabs.org/)
+* Explore page (https://preprlabs.org/)
 
-Projects page (https://preprlabs.org/myProjects)
+* Projects page (https://preprlabs.org/myProjects)
 
-Challenges page (https://preprlabs.org/list/challenge)
+* Challenges page (https://preprlabs.org/list/challenge)
 
-Challenge details page (https://preprlabs.org/challengeManager/front-end-developer-work-challenge)
+* Challenge details page (https://preprlabs.org/challengeManager/front-end-developer-work-challenge)
 
-Labs page (https://preprlabs.org/joinedLab)
+* Labs page (https://preprlabs.org/joinedLab)
 
 Do not be restrained by the current design and layout of the pages. However, do ensure that pages can perform their respective functions. Feel free to add additional details and functions, anything that you believe will result in the best user experience.
 

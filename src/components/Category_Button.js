@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { categoryDataFromNavData, randomKeyGenerator } from '../helpers/Helper_Functions.js'
 import { navigationItems } from "../data/Nav_Data.js";
-import './CategoryButton.css'
+import './Category_Button.css'
 
 export default function CategoryButton(props) {
  

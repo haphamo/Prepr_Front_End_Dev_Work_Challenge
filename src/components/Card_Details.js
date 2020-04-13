@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { data } from '../data/Explore_Data.js';
-import './CardDetails.css'
+import './Card_Details.css'
 import Tags from './Tags.js'
 import Button from './Button.js'
 

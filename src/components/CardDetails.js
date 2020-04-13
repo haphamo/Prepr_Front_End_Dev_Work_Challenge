@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { data } from '../data/Explore_Data.js';
 import './CardDetails.css'
@@ -6,13 +6,14 @@ import Tags from './Tags.js'
 import Button from './Button.js'
 
 // Determine that open and closed state by finding the date and the deadline date
-// the tags are buttons to view other cards
+// the tags are a tags to view other cards
 
 export default function CardDetails() {
   let { id } = useParams()
 
   const dataForCardDetails = Object.values(data).filter(item => item.id === parseInt(id))
-  const { status, type, title, summary, startDate, endDate, src } = (dataForCardDetails[0])
+  const { status, type, title, summary, startDate, endDate, src, createdOn } = (dataForCardDetails[0])
+  console.log(startDate)
   return(
     <div className="card-details-container">
       <div className="top-section">
@@ -27,10 +28,19 @@ export default function CardDetails() {
           </div>
           <div className="info-card">
             <div className="summary">{summary}</div>
-            <div className="start-date">Start Date: {startDate} </div>
-            <div className="deadline-date">Submission Deadline Date: {endDate}</div>
-            <div className="scoring"></div>
-            <div className="requirements"></div>
+            {type === "challenge" && 
+              <Fragment>
+                <div className="start-date">Start Date: {startDate} </div>
+                <div className="deadline-date">Submission Deadline Date: {endDate}</div>
+                <div className="scoring"></div>
+                <div className="requirements"></div>
+                
+              </Fragment>
+            }
+            {type === "lab" && 
+              <div className="created-on">Created On: {createdOn}</div>
+            }
+
           </div>
 
         </div>

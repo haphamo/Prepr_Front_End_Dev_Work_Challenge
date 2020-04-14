@@ -1,11 +1,9 @@
-
 .navigation {
   height: auto;
   border-bottom: groove 0.1em #eee;
   border-top: groove 0.1em #eee;
   display: flex;
-  /* flex-direction: row; */
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
   background-color: whitesmoke;
 }
 
@@ -32,15 +30,6 @@ a {
   color: black;
 }
 
-/* a:hover {
-  transform: scale(1.1);
-  transition-duration: 1s;
-
-} */
-
-/* ul > li {
-  flex: 10%
-} */
 
 .nav-title {
   font-size: small;

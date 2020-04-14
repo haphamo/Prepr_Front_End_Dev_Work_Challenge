@@ -35,3 +35,5 @@ Evaluation Criteria:
 25% on how well you used various tools & processes to tackle the challenge
 
 50% on the final solution and output of your challenge
+
+Built with React.js

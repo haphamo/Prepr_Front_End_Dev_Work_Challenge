@@ -4,18 +4,19 @@ import Header from "./components/Header.js";
 import Nav from "./components/Nav.js";
 import Card from "./components/Card.js";
 import Filter from "./components/Filter.js"
-import CategoryButton from "./components/CategoryButton.js";
+import CategoryButton from "./components/Category_Button.js";
 import "./App.css";
 // import { categoryDataFromNavData } from "./helpers/Helper_Functions.js";
-import CardDetails from './components/CardDetails.js';
+import CardDetails from './components/Card_Details.js';
+import MyProjects from './components/My_Projects.js'
 
 function App() {
   const [filters, setFilters] = useState({})
  
   return (
-    <div> 
-      <Header />
+    // <div> 
       <Router>
+      <Header />
         <Nav />
         <Switch>
           <Route exact path="/">
@@ -30,6 +31,7 @@ function App() {
           </Route>
           <Route exact path="/projects">
             <CategoryButton path="projects" />
+           
             <Card type="project"/>
           </Route>
 
@@ -43,9 +45,18 @@ function App() {
           <Route path="/labs/lab/:id">
             <CardDetails />
           </Route>
+
+
+          <Route path="/my-projects">
+            <MyProjects />
+          </Route>
+          <Route path="/add-project">
+            <div>Hello world</div>
+          </Route>
+ 
         </Switch>
       </Router>
-    </div>
+    // </div>
   );
 }
 

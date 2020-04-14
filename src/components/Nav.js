@@ -23,7 +23,7 @@ export default function Nav() {
             <div className="nav-title">{name}</div>
           </li>
         </Link> :
-        <Link to={`/${name.toLowerCase()}`}>
+        <Link to={path}>
           <li className="nav-list-item">
             <div className="nav-icon-">
               <img alt={alt} src={src}></img>
@@ -36,10 +36,9 @@ export default function Nav() {
   });
 
   return (
-    <div>
       <nav className="navigation">
         <ul>{allNavItems}</ul>
       </nav>
-    </div>
+ 
   );
 }

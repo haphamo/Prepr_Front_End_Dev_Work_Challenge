@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Button from './Button.js'
+// import { Link } from 'react-router-dom';
+// import Button from './Button.js'
 import './My_Projects.css'
-import Card from './Card.js'
+// import Card from './Card.js'
 
 export default function MyProjects() {
-  const [viewMyProjects, setViewMyProjects] = useState(false)
+  // const [viewMyProjects, setViewMyProjects] = useState(false)
   const [toggleAddProject, setToggleAddProject] = useState(true)
   // const isActive = function() {
   //   onClick toggle state to be active, onlcik sends a value send the value

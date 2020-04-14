@@ -1,6 +1,49 @@
 .project-section {
   background-color: whitesmoke;
-  padding: 1em 0em;
+  /* padding: 1em 0em; */
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.add-project {
+  display: flex;
+  justify-content: flex-end;
+  /* padding-bottom: 1em; */
+}
+
+.view-projects {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0em ;
+}
+
+.view {
+  background-color: darkseagreen;
+}
+
+.view-projects > .button {
+  /* flex: 1;  */
+  /* width: 13em; */
+  border: 0;
+  font-size: 1.5em;
+  /* background-color: rgb(13, 100, 42); */
+  /* color: whitesmoke; */
+  border: solid 1px rgb(13, 100, 42);
+
+  padding: 0.5em 2em;
+  color: rgb(13, 100, 42);
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(13, 100, 42); 
+    color: whitesmoke;
+    border: solid 1px rgb(13, 100, 42);
+}
+
+.button.button--selected {
+    background-color: rgb(13, 100, 42); 
+    color: whitesmoke;
 }

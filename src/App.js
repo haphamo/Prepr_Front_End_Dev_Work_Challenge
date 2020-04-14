@@ -14,9 +14,9 @@ function App() {
   const [filters, setFilters] = useState({})
  
   return (
-    <div> 
-      <Header />
+    // <div> 
       <Router>
+      <Header />
         <Nav />
         <Switch>
           <Route exact path="/">
@@ -50,9 +50,13 @@ function App() {
           <Route path="/my-projects">
             <MyProjects />
           </Route>
+          <Route path="/add-project">
+            <div>Hello world</div>
+          </Route>
+ 
         </Switch>
       </Router>
-    </div>
+    // </div>
   );
 }
 

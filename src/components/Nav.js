@@ -36,10 +36,9 @@ export default function Nav() {
   });
 
   return (
-    <div>
       <nav className="navigation">
         <ul>{allNavItems}</ul>
       </nav>
-    </div>
+ 
   );
 }

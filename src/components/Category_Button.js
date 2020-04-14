@@ -19,7 +19,7 @@ export default function CategoryButton(props) {
 
     // function that determines active state based off the path(URL)
     const active = function(path) {
-      if(props.path === path) {
+      if(props.path === path || props.path === "my-projects") {
         return `--selected`
       }
       return ""

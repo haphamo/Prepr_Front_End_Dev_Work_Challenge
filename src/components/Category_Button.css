@@ -1,13 +1,13 @@
 .category * {
   text-align: center;
   color: rgb(13, 100, 42);
+  border: solid 1px rgb(13, 100, 42);
   align-items: center;
   background-color: whitesmoke;
-  width: 10em;
+  width: 13em;
   padding: 1em;
   display: flex;
   justify-content: center;
-  border: solid;
 }
 
 .category :hover{
@@ -30,7 +30,8 @@
 }
 .category-container > a:hover {
   color: rgb(13, 100, 42);
-}
+  border: solid rgb(13, 100, 42)
+;}
 
 .category.category--selected * {
   color: whitesmoke;

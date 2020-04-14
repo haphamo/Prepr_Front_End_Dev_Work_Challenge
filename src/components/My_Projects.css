@@ -22,28 +22,32 @@
   background-color: darkseagreen;
 }
 
-.view-projects > .button {
+.project-button:hover {
+  background-color: rgb(13, 100, 42); 
+  color: whitesmoke;
+  border: solid 1px rgb(13, 100, 42);
+}
+
+.project-button.button--selected {
+  background-color: rgb(13, 100, 42); 
+  color: whitesmoke;
+}
+
+
+.project-button {
   /* flex: 1;  */
-  /* width: 13em; */
   border: 0;
-  font-size: 1.5em;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  padding: 1em;
   /* background-color: rgb(13, 100, 42); */
   /* color: whitesmoke; */
   border: solid 1px rgb(13, 100, 42);
-
   padding: 0.5em 2em;
   color: rgb(13, 100, 42);
   background-color: whitesmoke;
   cursor: pointer;
-}
-
-.button:hover {
-    background-color: rgb(13, 100, 42); 
-    color: whitesmoke;
-    border: solid 1px rgb(13, 100, 42);
-}
-
-.button.button--selected {
-    background-color: rgb(13, 100, 42); 
-    color: whitesmoke;
+  width: 15em;
+  padding: 1em;
 }

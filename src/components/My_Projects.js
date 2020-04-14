@@ -6,7 +6,7 @@ import './My_Projects.css'
 
 export default function MyProjects() {
   // const [viewMyProjects, setViewMyProjects] = useState(false)
-  const [toggleAddProject, setToggleAddProject] = useState(true)
+  const [toggleAddProject, setToggleAddProject] = useState(false)
   // const isActive = function() {
   //   onClick toggle state to be active, onlcik sends a value send the value
   // }
@@ -15,9 +15,9 @@ export default function MyProjects() {
     <div className="project-section">
 
       <div className="view-projects">
-        <button className="button button--selected">My Projects</button>
-        <button className="button">Invited Projects</button>
-        <button className="button" onClick={() => setToggleAddProject(!toggleAddProject)}>+ Add Project</button>
+        <button className="project-button button--selected">My Projects</button>
+        <button className="project-button" >Invited Projects</button>
+        <button className="project-button" onClick={() => setToggleAddProject(!toggleAddProject)}>+ Add Project</button>
         {/* <Link className="button" to="/add-project">+ Add Project</Link> */}
         
       </div>
